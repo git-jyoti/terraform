@@ -26,7 +26,7 @@ pipeline {
                 steps {
                 script {
                     // Execute terraform plan and save the output to a file
-                    sh 'terraform plan -out=tfplan -no-color > tfplan.txt' 
+                    sh 'terraform plan' 
 
                    }
             }
