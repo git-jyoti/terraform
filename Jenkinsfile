@@ -22,5 +22,14 @@ pipeline {
                 sh 'terraform init' 
             }
         }
+          stage('Terraform Plan') {
+                steps {
+                script {
+                    // Execute terraform plan and save the output to a file
+                    sh 'terraform plan -out=tfplan -no-color > tfplan.txt' 
+
+                   }
+            }
+        }
     }
 }
