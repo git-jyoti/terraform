@@ -31,5 +31,14 @@ pipeline {
                    }
             }
         }
+       stage('Terraform apply') {
+                steps {
+                script {
+                    // Execute terraform plan and save the output to a file
+                    sh 'terraform apply --auto-approve'  
+
+                   }
+            }
+        }
     }
 }
