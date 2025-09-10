@@ -31,11 +31,20 @@ pipeline {
                    }
             }
         }
-       stage('Terraform apply') {
+      // stage('Terraform apply') {
+      //          steps {
+        //        script {
+                    // Execute terraform plan and save the output to a file
+            //        sh 'terraform apply --auto-approve'  
+
+              //     }
+            //}
+        //}
+      stage('Terraform destroy') {
                 steps {
                 script {
                     // Execute terraform plan and save the output to a file
-                    sh 'terraform apply --auto-approve'  
+                    sh 'terraform destroy --auto-approve'  
 
                    }
             }
