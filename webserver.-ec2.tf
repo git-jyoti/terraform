@@ -9,8 +9,6 @@ terraform {
 
   provider "aws" {
   region     = "ap-south-1"          # Replace with your desired AWS region (e.g., "us-west-2", "eu-west-1")
-  access_key = "AKIAXMMTWNBFO2INKP7G" # **WARNING: NOT RECOMMENDED for production**
-  secret_key = "AxK6M4pGn9sYRZ1mlfdX7iLN5dgQB0kE1n5zaNRw"   # **WARNING: NOT RECOMMENDED for production**
   }
 
 resource "aws_vpc" "main_vpc" {
