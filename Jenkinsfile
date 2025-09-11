@@ -31,23 +31,23 @@ pipeline {
                    }
             }
         }
-      // stage('Terraform apply') {
-      //          steps {
-        //        script {
-                    // Execute terraform plan and save the output to a file
-            //        sh 'terraform apply --auto-approve'  
-
-              //     }
-            //}
-        //}
-      stage('Terraform destroy') {
+       stage('Terraform apply') {
                 steps {
                 script {
-                    // Execute terraform plan and save the output to a file
-                    sh 'terraform destroy --auto-approve'  
+                     Execute terraform plan and save the output to a file
+                    sh 'terraform apply --auto-approve'  
 
                    }
             }
         }
+      //stage('Terraform destroy') {
+               // steps {
+               // script {
+                    // Execute terraform plan and save the output to a file
+                   // sh 'terraform destroy --auto-approve'  
+
+                  // }
+           // }
+        //}
     }
 }
